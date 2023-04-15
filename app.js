@@ -1,16 +1,25 @@
-const parent = React.createElement(
-    "div",
+const parent = React.createElement("div",
     {id:"parent"},
+    [
 
-     [React.createElement("div", {id:"child1"},[
-        React.createElement("h1",{},"Its h1"),
-        React.createElement("h2",{},"Its h2")
-     ]),React.createElement("div", {id:"child2"},[
-        React.createElement("h1",{},"Its h1"),
-        React.createElement("h2",{},"Its h2")
-     ])]
+        React.createElement
+           ("div",
+           {id:"child1"},
+           [React.createElement("h1",{},"the h1 tag"),
+           React.createElement("h2",{},"the h2 tag")
+       ]),
+
+       React.createElement
+          ("div",
+          {id:"child2"},
+          [React.createElement("h1",{},"the h1 tag"),
+          React.createElement("h2",{},"the h2 tag")
+      ])]
 );
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+
+root.render(parent)
